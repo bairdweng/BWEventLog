@@ -40,8 +40,12 @@ open class BWEventLog: NSObject {
     /// - Parameter callBack: 回调
     static func getAppInfo(token:String) {
         let bundleId = Bundle.main.bundleIdentifier ?? ""
-        let url = BWEventLogUrl.getAppInfo + "/\(bundleId)?token=\(token)"
-        AF.request(url, method: .get, encoding: JSONEncoding.default).responseJSON { (resp) in
+        let url = BWEventLogUrl.getAppInfo
+        let params = [
+            "token":token,
+            "bundle_id":bundleId
+        ]
+        AF.request(url, method: .post, parameters: params).responseJSON { (resp) in
             switch resp.result {
             case .success(let json):
                 let dic = json as? [String : Any]
@@ -63,7 +67,7 @@ open class BWEventLog: NSObject {
 class BWEventLogUrl: NSObject {
     static var baseUrl = "72dsc7kletjORa1HUDWud0Eei4+7wpmK76euuJX6A9A=".bwAesDe
     static var token = baseUrl + "/getToken"
-    static var getAppInfo = baseUrl + "/app/getAppInfo"
+    static var getAppInfo = baseUrl + "/app/init"
 }
 
 

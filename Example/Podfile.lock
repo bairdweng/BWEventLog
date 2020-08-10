@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (5.0.5)
+  - AsyncSwift (2.0.4)
+  - BWEventLog (0.1.0):
+    - Alamofire
+    - AsyncSwift
+    - CryptoSwift
+  - CryptoSwift (1.3.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - BWEventLog (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AsyncSwift
+    - CryptoSwift
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  BWEventLog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  BWEventLog: 02509dbdfcced122af98ff8db13dfbe5f6132096
+  CryptoSwift: 1283821600233bdbeb96d7b389c3288c3bf77211
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: ce1be1b0e144d2d55a5fd25ac00c27b6a96ecd4d
+
+COCOAPODS: 1.9.3

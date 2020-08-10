@@ -1,0 +1,13 @@
+platform :ios, '10.0'
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'BWEventLog_Example' do
+  pod 'BWEventLog', :path => '../'
+
+  target 'BWEventLog_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
